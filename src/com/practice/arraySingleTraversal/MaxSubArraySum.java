@@ -1,4 +1,4 @@
-package com.practice.array;
+package com.practice.arraySingleTraversal;
 //This solution uses Kadane's Algorithm to find the maximum subarray sum in a single traversal.
 //I maintain two variables: currentSum and maxSum.
 //currentSum represents the maximum subarray sum ending at the current index,

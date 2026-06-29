@@ -1,4 +1,4 @@
-package com.practice.array;
+package com.practice.arraySingleTraversal;
 
 public class FindLargestnNumber {
     public static  void  main (String[] args) {

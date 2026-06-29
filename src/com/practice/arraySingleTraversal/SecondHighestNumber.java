@@ -1,4 +1,4 @@
-package com.practice.array;
+package com.practice.arraySingleTraversal;
 //This solution finds the second highest number in an array using a single traversal.
 //I maintain two variables: first to store the largest number seen so far
 //and second to store the second largest number. Initially,

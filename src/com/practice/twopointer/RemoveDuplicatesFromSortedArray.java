@@ -10,8 +10,8 @@ public class RemoveDuplicatesFromSortedArray {
                 arr[left] = arr[right];
             }
         }
-int newLength = left +1 ;
-for (int k = 0 ; k<newLength ; k++){
+    int newLength = left +1 ;
+    for (int k = 0 ; k<newLength ; k++){
     System.out.println(arr[k] + " ");
 }
     }

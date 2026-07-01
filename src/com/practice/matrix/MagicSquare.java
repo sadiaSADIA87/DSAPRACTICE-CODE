@@ -1,0 +1,90 @@
+package com.practice.matrix;
+
+public class MagicSquare {
+
+
+        public static void main(String[] args) {
+
+            int[][] matrix = {
+                    {8, 1, 6},
+                    {3, 5, 7},
+                    {4, 9, 2}
+            };
+
+            int n = matrix.length;
+
+            // Target sum = First row sum
+            int targetSum = 0;
+
+            for (int j = 0; j < n; j++) {
+                targetSum += matrix[0][j];
+            }
+
+            boolean isMagic = true;
+
+            // Check Rows
+            for (int i = 0; i < n; i++) {
+
+                int rowSum = 0;
+
+                for (int j = 0; j < n; j++) {
+                    rowSum += matrix[i][j];
+                }
+
+                if (rowSum != targetSum) {
+                    isMagic = false;
+                    break;
+                }
+            }
+
+            // Check Columns
+            if (isMagic) {
+
+                for (int j = 0; j < n; j++) {
+
+                    int colSum = 0;
+
+                    for (int i = 0; i < n; i++) {
+                        colSum += matrix[i][j];
+                    }
+
+                    if (colSum != targetSum) {
+                        isMagic = false;
+                        break;
+                    }
+                }
+            }
+
+            // Check Main Diagonal
+            if (isMagic) {
+
+                int diagonal1 = 0;
+
+                for (int i = 0; i < n; i++) {
+                    diagonal1 += matrix[i][i];
+                }
+
+                if (diagonal1 != targetSum)
+                    isMagic = false;
+            }
+
+            // Check Secondary Diagonal
+            if (isMagic) {
+
+                int diagonal2 = 0;
+
+                for (int i = 0; i < n; i++) {
+                    diagonal2 += matrix[i][n - 1 - i];
+                }
+
+                if (diagonal2 != targetSum)
+                    isMagic = false;
+            }
+
+            if (isMagic)
+                System.out.println("Magic Square");
+            else
+                System.out.println("Not a Magic Square");
+        }
+    }
+

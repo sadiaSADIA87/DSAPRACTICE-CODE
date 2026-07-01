@@ -27,6 +27,8 @@ public class LongestSubstringWithoutRepeating {
                 set.remove(s.charAt(left));
                 left++;
             }
+            set.add(s.charAt(right));
+
             maxLength = Math.max(maxLength,right-left +1);
         }
         System.out.println(maxLength);
